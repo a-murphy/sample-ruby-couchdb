@@ -10,4 +10,4 @@ services:
   - couchdb
 
 notifications:
-     email: false
+  email: false
