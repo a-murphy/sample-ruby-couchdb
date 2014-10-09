@@ -5,6 +5,7 @@ rvm:
   
 env:
   - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
+  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/coverage
 
 services:
   - couchdb
