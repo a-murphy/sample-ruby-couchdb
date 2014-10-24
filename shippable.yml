@@ -13,4 +13,4 @@ services:
 notifications:
   email: false
   
-build_image: scratch
+build_image: shippable/api:latest
