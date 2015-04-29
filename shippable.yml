@@ -16,4 +16,3 @@ services:
 notifications:
   email: false
 
-build_image: shippable/minv2
