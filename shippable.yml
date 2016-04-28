@@ -1,0 +1,20 @@
+language: ruby
+
+rvm:
+  - 1.9.3
+  
+env:
+  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
+  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/coverage
+  
+script:
+  - ls -al
+  - ls -al vendor
+  - exit 0
+
+services:
+  - couchdb
+
+notifications:
+  email: false
+
