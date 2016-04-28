@@ -6,11 +6,13 @@ rvm:
 env:
   - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
   - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/coverage
-  
-script:
-  - ls -al
-  - bundle show mime-types
-  - exit 0
+
+build:
+  ci:
+    - ls -al
+    - bundle show mime-types
+  on_success:
+    docker build -t test .
 
 services:
   - couchdb
