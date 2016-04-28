@@ -10,9 +10,8 @@ env:
 build:
   ci:
     - ls -al
-    - bundle show mime-types
   on_success:
-    docker build -t test .
+    - docker build -t test .
 
 services:
   - couchdb
