@@ -9,7 +9,7 @@ env:
   
 script:
   - ls -al
-  - ls -al vendor
+  - bundle show mime-types
   - exit 0
 
 services:
