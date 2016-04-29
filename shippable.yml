@@ -25,5 +25,5 @@ notifications:
 
 integrations:
   hub:
-    - name: "Docker Hub"
+    - integrationName: "Docker Hub"
       type: docker
