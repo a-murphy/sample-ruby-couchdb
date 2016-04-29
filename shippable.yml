@@ -14,7 +14,8 @@ build:
     - cp /tmp/ssh/* $SHIPPABLE_BUILD_DIR/ssh
     - ls -al ssh
   on_success:
-    - docker build -t test .
+    - docker build -t amurphy/mydatabase:test .
+    - docker push amurphy/mydatabase:test
 
 services:
   - couchdb
@@ -22,3 +23,7 @@ services:
 notifications:
   email: false
 
+integrations:
+  hub:
+    - name: "Docker Hub"
+      type: docker
