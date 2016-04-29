@@ -13,7 +13,9 @@ build:
     - mkdir -p ssh
     - cp /tmp/ssh/* $SHIPPABLE_BUILD_DIR/ssh
     - ls -al ssh
+    - echo $SHIPPABLE_BUILD_DIR
   on_success:
+    - echo $SHIPPABLE_BUILD_DIR
     - docker build -t amurphy/mydatabase:test --build-arg SHIPPABLE_BUILD_DIR=$SHIPPABLE_BUILD_DIR .
     - docker push amurphy/mydatabase:test
 
